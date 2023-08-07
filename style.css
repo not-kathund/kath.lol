@@ -1,5 +1,22 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
 body {
-  background: url(Untitled.png), lightgray 50% / cover no-repeat;
-  width: 1920px;
-  height: 1080px;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
