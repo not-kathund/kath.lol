@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
-@import url("https://unpkg.com/@catppuccin/palette/css/catppuccin.css");
+
+:root {
+  --ctp-macchiato-pink-rgb: 245 189 230;
+  --ctp-macchiato-mauve-rgb: 198 160 246;
+  --ctp-macchiato-red-rgb: 237 135 150;
+  --ctp-macchiato-sky-rgb: 145 215 227;
+  --ctp-macchiato-base-rgb: 36 39 58;
+}
 
 *,
 *::before,
@@ -10,7 +17,7 @@
 }
 
 body {
-  padding: 0 2rem ;
+  padding: 0 2rem;
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -21,21 +28,59 @@ body {
   justify-content: center;
   align-items: center;
   color: rgb(var(--ctp-macchiato-sky-rgb));
+  overflow: hidden;
   flex-direction: column;
+  cursor: none;
+
   span {
-    color: rgb(var(--ctp-macchiato-pink-rgb));
-  }
-  a,
-  a:visited,
-  a:hover,
-  a:active,
-  .info {
-    text-decoration: none;
     color: rgb(var(--ctp-macchiato-red-rgb));
   }
 
   h1 {
     font-size: 2.5rem;
     font-weight: 700;
+  }
+
+  small {
+    font-size: 1.5rem;
+    color: rgb(var(--ctp-macchiato-mauve-rgb));
+  }
+
+  a,
+  a:visited,
+  a:hover,
+  a:active,
+  .info {
+    text-decoration: none;
+    cursor: none;
+    color: rgb(var(--ctp-macchiato-pink-rgb));
+    span {
+      color: rgb(var(--ctp-macchiato-red-rgb));
+    }
+  }
+
+  .cursor {
+    width: 30px;
+    height: 30px;
+    background-color: rgba(237, 135, 150, 0.2);
+    position: absolute;
+    display: none;
+    border-radius: 100%;
+    pointer-events: none;
+    transform: scale(0.8);
+    transition: 0.5s background, 0.2s transform;
+  }
+
+  @keyframes fadeIn {
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .fade {
+    animation: fadeIn 0.5s forwards;
+    opacity: 0;
+    transform: scale(0.85);
   }
 }
