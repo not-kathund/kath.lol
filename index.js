@@ -1,4 +1,7 @@
-var colors = { default: 'rgba(237, 135, 150, 0.2)', hover: 'rgba(138, 173, 244, 0.6)' };
+var colors = {
+  default: 'rgba(237, 135, 150, 0.2)',
+  hover: 'rgba(138, 173, 244, 0.6)',
+};
 const fadeElements = document.querySelectorAll('.fade');
 const cursor = document.querySelector('.cursor');
 

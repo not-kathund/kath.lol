@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
 :root {
   --ctp-macchiato-pink-rgb: 245 189 230;
   --ctp-macchiato-mauve-rgb: 198 160 246;
@@ -17,7 +17,7 @@
 
 body {
   padding: 0 2rem;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
   width: 100vw;
@@ -31,6 +31,9 @@ body {
   flex-direction: column;
   cursor: none;
   position: relative;
+  background-size: 40px 40px;
+  background-image: radial-gradient(circle, rgba(255, 83, 143, 0.5) 1px, rgba(0, 0, 0, 0) 2px);
+  animation: backgroundAnimation 1200s linear infinite;
 }
 body footer {
   text-align: center;
@@ -75,9 +78,7 @@ body .cursor {
   border-radius: 100%;
   pointer-events: none;
   transform: scale(0.8);
-  transition:
-    0.5s background,
-    0.2s transform;
+  transition: 0.5s background, 0.2s transform;
 }
 @keyframes fadeIn {
   100% {
@@ -89,6 +90,14 @@ body .fade {
   animation: fadeIn 0.5s forwards;
   opacity: 0;
   transform: scale(0.85);
+}
+@keyframes backgroundAnimation {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px -10000px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

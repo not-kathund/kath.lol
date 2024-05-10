@@ -29,6 +29,9 @@ body {
   flex-direction: column;
   cursor: none;
   position: relative;
+  background-size: 40px 40px;
+  background-image: radial-gradient(circle, rgba(255, 83, 143, 0.5) 1px, rgba(0, 0, 0, 0) 2px);
+  animation: backgroundAnimation 1200s linear infinite;
   footer {
     text-align: center;
     bottom: 0;
@@ -82,5 +85,13 @@ body {
     animation: fadeIn 0.5s forwards;
     opacity: 0;
     transform: scale(0.85);
+  }
+  @keyframes backgroundAnimation {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -10000px -10000px;
+    }
   }
 }
