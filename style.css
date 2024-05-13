@@ -20,20 +20,25 @@ body {
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
+  max-width: 50vw;
   background: rgb(var(--ctp-macchiato-base-rgb));
   display: flex;
   justify-content: center;
   align-items: center;
   color: rgb(var(--ctp-macchiato-sky-rgb));
-  overflow: hidden;
   flex-direction: column;
   cursor: none;
   position: relative;
   background-size: 40px 40px;
   background-image: radial-gradient(circle, rgba(255, 83, 143, 0.5) 1px, rgba(0, 0, 0, 0) 2px);
   animation: backgroundAnimation 1200s linear infinite;
+}
+@media (min-width: 800px) {
+  body main {
+    max-width: 60vw;
+  }
 }
 body footer {
   text-align: center;
